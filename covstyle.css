@@ -1,0 +1,380 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    z-index: -1;
+}
+body{
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+nav {
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    padding: 10px 50px;
+    height: 60px;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.1rem;
+    color: black;
+     justify-content: space-between;
+}
+
+#lgsatgas {
+    height: 50px;
+    width: 90px;
+}
+
+.sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar li {
+    list-style: none;
+    margin: 0 15px;
+    /* width: max-content; */
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sidebar li a:hover{
+    text-decoration: underline;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.logo a{
+    text-decoration: none ;
+    color: black;
+    font-weight: bold;
+}
+
+.home {
+    padding: 80px;
+    display: grid;
+    grid-template-areas: "title title"
+                        "desc gbrcovid";
+    grid-template-columns: "1fr 10fr";
+    grid-template-rows: "1.5fr 1fr";
+    row-gap: 5px;
+    column-gap: 25px;
+}
+
+.title {
+    /* border: 2px solid black; */
+    grid-area: title;
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 10px 0;
+}
+
+.desc {
+    /* border: 2px solid black; */
+    grid-area: desc;
+    font-size: 16px;
+    text-align: left;
+    line-height: 150%;
+    padding-right: 15px;
+}
+
+.gmbr1 img {
+    /* border: 2px solid black; */
+    margin-top: -30px;
+    height: 500px;
+    width: 500px;
+}
+
+
+/* news */
+.head {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+.news {
+    display: flex;
+    flex-wrap: wrap;
+    height: unset;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.cardnews {
+    border: 1px solid rgba(0, 0, 0, 0.247);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0 20px 20px 20px ;
+    border-radius: 4px;
+}
+
+.cardnews a{
+    text-align: justify;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.cardnews a:hover {
+    color: mediumblue;
+}
+
+.cardnews h5 {
+    padding: 0 5px;
+}
+
+.cardnews p {
+    padding: 0 5px 5px 5px;
+    font-size: 13.5px;
+}
+
+.gambarnews {
+    width: 300px;
+    height: 180px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* event */
+.event {
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid rgba(0, 0, 0, 0.253);
+    background-color: rgba(58, 58, 58, 0.116);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px 10px 20px;
+    /* justify-content: center; */
+    margin-bottom: 80px;
+    overflow-x:scroll;
+}
+.cardevent {
+    background-color: aliceblue;
+    border: 1px solid rgba(0, 0, 0, 0.281);
+    width: 30%;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 130%;
+    min-width: 200px;
+}
+
+.cardevent p {
+    font-size: 14px;
+}
+
+/* kontak */
+.contact {
+    margin: 0 auto;
+    width: 600px;
+    padding: 0 30px;
+    margin-bottom: 80px;
+}
+
+.field {
+    margin: 10px 20px;
+}
+
+input {
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+textarea {
+width: 100%;
+padding: 10px;
+}
+
+.fieldbtn {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+}
+
+button {
+    margin: 0 15px;
+    width: 50%;
+    height: 30px;
+}
+
+.footer {
+    box-shadow: 10px 1px 10px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 100%;
+}
+
+.footer ul {
+    text-align: center;
+}
+
+.footer p {
+    font-size: 13px;
+    text-align: center;
+}
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+    z-index: 3;
+    transition: 1s;
+}
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.bgsidebar.change {
+    right: 0;
+}
+
+.bgsidebar {
+    top: 0;
+    right: -100%;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.281);
+    transition: 0.3s;
+    visibility: hidden;
+}
+
+.navside {
+        position: absolute;
+        visibility: hidden;
+        position: fixed;
+        background-color:aliceblue;
+        top: 0;
+        bottom: 0;
+        right: -300px;
+        width: 300px;
+        transition: 0.5s;
+        /* align-items: flex-end; */
+        /* flex-direction: row; */
+}
+
+.sidebar1 {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 20px 20px;
+}
+
+.sidebar1 li a{
+    line-height: 45px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.sidebar1 li a:hover {
+    color: rgb(21, 98, 212);
+}
+
+.navside.change{
+    right: 0;
+    transition: 0.5s;
+}
+
+.burger.change{
+    z-index: 3;
+    position: absolute;
+    right: 315px;
+    
+}
+
+@media screen and (max-width: 768px) {
+    
+    .bgsidebar{
+        visibility: visible;
+    }
+    .navside {
+        z-index: 2;
+        visibility: visible;
+    }
+
+    .sidebar1 {
+        display: flex;
+        color: black;
+    }
+
+    .gmbr1 {
+        display: none;
+    }
+    .sidebar {
+        display: none !important;
+    }
+    .burger {
+        z-index: 3;
+        visibility: visible;
+    }
+
+    .bar1, .bar2, .bar3{
+        visibility: visible;
+    }
+
+    nav {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contact {
+        width: 100%;
+        padding: 0 100px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .contact {
+        padding: 0 10px;
+    }
+    .home {
+        padding: 80px 20px;
+    }
+
+    .navside {
+        width: 200px;
+        right: -200px;
+    }
+
+    .desc {
+        padding-right: 0;
+        width: 115%;
+        margin: 0 auto;
+    }
+    .desc p {
+        text-align: center;
+    }
+    
+}

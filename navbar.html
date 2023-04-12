@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+
+    <style>
+      .bgr {
+        display: inline-block;
+        cursor: pointer;
+        z-index: 2;
+      }
+
+      .bar1,
+      .bar2,
+      .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: blueviolet;
+        margin: 6px 0;
+        transition: 0.4s;
+        border-radius: 5px;
+      }
+      .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+        background-color: white;
+      }
+
+      .change .bar2 {
+        opacity: 0;
+        background-color: white;
+      }
+
+      .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+        background-color: white;
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      nav {
+        padding: 10px 20px;
+        box-shadow: 1px 2px 10px 2px rgba(0, 0, 0, 0.1);
+        background-color: white;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="container">
+          <div class="logo">
+            <a href="">Anjar</a>
+          </div>
+          <div class="bgr">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+          <ul class="sidebar">
+            <ul>
+              <a href="">Home</a>
+            </ul>
+            <ul>
+              <a href="">News</a>
+            </ul>
+            <ul>
+              <a href="">Events</a>
+            </ul>
+            <ul>
+              <a href="">Contact</a>
+            </ul>
+            <ul>
+              <a href="">Game</a>
+            </ul>
+            <ul>
+              <a href="">Vaccination Platform</a>
+            </ul>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
